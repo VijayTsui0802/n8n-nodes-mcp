@@ -222,7 +222,7 @@ export class McpClient implements INodeType {
 
 				const httpStreamUrl = httpCredentials.httpStreamUrl as string;
 				const messagesPostEndpoint = (httpCredentials.messagesPostEndpoint as string) || '';
-				timeout = httpCredentials.httpTimeout as number || 60000;
+				timeout = httpCredentials.httpTimeout as number || 600000;
 
 				// Parse headers
 				let headers: Record<string, string> = {};
@@ -260,7 +260,7 @@ export class McpClient implements INodeType {
 
 				const sseUrl = sseCredentials.sseUrl as string;
 				const messagesPostEndpoint = (sseCredentials.messagesPostEndpoint as string) || '';
-				timeout = sseCredentials.sseTimeout as number || 60000;
+				timeout = sseCredentials.sseTimeout as number || 600000;
 
 				// Parse headers
 				let headers: Record<string, string> = {};
